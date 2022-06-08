@@ -46,7 +46,7 @@ void carHandshake() {
   HTTPClient http;
   while (responseCode != 200) {  // it has not succeeded    
     delay(500);
-    String serverPath = "http://192.168.0.21:8080/car-handshake";
+    String serverPath = "http://192.168.0.21/car-handshake";
     http.begin(serverPath.c_str());
     http.addHeader("api-key", API_KEY);
     responseCode = http.GET();
